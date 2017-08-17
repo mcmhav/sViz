@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class StoryboardBasedController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,8 @@ class ViewController: NSViewController {
         }
     }
 
-
+    class func loadFromStoryboard() -> StoryboardBasedController{
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateController(withIdentifier: "har") as! StoryboardBasedController
+    }
 }
-

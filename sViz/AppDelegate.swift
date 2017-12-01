@@ -6,6 +6,7 @@
 //  Copyright © 2017 Cake. All rights reserved.
 //
 
+import Foundation
 import Cocoa
 
 @NSApplicationMain
@@ -42,6 +43,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        if let button = statusItem.button {
 //            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
 //        }
+        // let request = URLRequest(url: NSURL(string: "https://api.bitfinex.com/v1/pubticker/btcusd")! as URL)
+        
+        // Infinitely run the main loop to wait for our request.
+        // Only necessary if you are testing in the command line.
+//        RunLoop.main.run()
+
+
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             eventMonitor?.start()
